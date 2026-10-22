@@ -9,6 +9,7 @@
 
 ## Restaurants
 
+- [7 Adams](https://alpha-0619.github.io/usa-menus/7-adams/): Californian; menu source restaurant published, checked 2026-10-22
 - [8282](https://alpha-0619.github.io/usa-menus/8282/): Korean; menu source restaurant published, checked 2026-10-22
 - [A16](https://alpha-0619.github.io/usa-menus/a16/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Acamaya](https://alpha-0619.github.io/usa-menus/acamaya/): Mexican; menu source restaurant published, checked 2026-10-22
@@ -28,14 +29,20 @@
 - [Cochon](https://alpha-0619.github.io/usa-menus/cochon/): Cajun; menu source restaurant published, checked 2026-10-22
 - [Coqodaq](https://alpha-0619.github.io/usa-menus/coqodaq/): Korean; menu source restaurant published, checked 2026-10-22
 - [Covacha](https://alpha-0619.github.io/usa-menus/covacha/): Mexican; menu source restaurant published, checked 2026-10-22
+- [Crown Shy](https://alpha-0619.github.io/usa-menus/crown-shy/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Cullum's Attaboy](https://alpha-0619.github.io/usa-menus/cullum-s-attaboy/): French; menu source restaurant published, checked 2026-10-22
 - [Dalessandro's](https://alpha-0619.github.io/usa-menus/dalessandro-s/): American; menu source restaurant published, checked 2026-10-22
+- [Daniel](https://alpha-0619.github.io/usa-menus/daniel/): French; menu source restaurant published, checked 2026-10-22
 - [Daru](https://alpha-0619.github.io/usa-menus/daru/): Indian; menu source restaurant published, checked 2026-10-22
 - [Dauphine's](https://alpha-0619.github.io/usa-menus/dauphine-s/): Creole; menu source restaurant published, checked 2026-10-22
 - [Dhamaka](https://alpha-0619.github.io/usa-menus/dhamaka/): Indian; menu source restaurant published, checked 2026-10-22
 - [Dija Mara](https://alpha-0619.github.io/usa-menus/dija-mara/): Indonesian; menu source restaurant published, checked 2026-10-22
+- [Dirt Candy](https://alpha-0619.github.io/usa-menus/dirt-candy/): Vegetarian; menu source restaurant published, checked 2026-10-22
 - [Dizengoff](https://alpha-0619.github.io/usa-menus/dizengoff/): Israeli; menu source restaurant published, checked 2026-10-22
 - [Emeril’s](https://alpha-0619.github.io/usa-menus/emerils/): American; menu source restaurant published, checked 2026-10-22
+- [Essential by Christophe](https://alpha-0619.github.io/usa-menus/essential-by-christophe/): French Contemporary; menu source restaurant published, checked 2026-10-22
+- [Francie](https://alpha-0619.github.io/usa-menus/francie/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Frevo](https://alpha-0619.github.io/usa-menus/frevo/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Gabriel Kreuther](https://alpha-0619.github.io/usa-menus/gabriel-kreuther/): French; menu source restaurant published, checked 2026-10-22
 - [Gemma](https://alpha-0619.github.io/usa-menus/gemma/): American; menu source restaurant published, checked 2026-10-22
 - [Giant](https://alpha-0619.github.io/usa-menus/giant/): American; menu source restaurant published, checked 2026-10-22
@@ -59,6 +66,7 @@
 - [Kitchen Rumors](https://alpha-0619.github.io/usa-menus/kitchen-rumors/): Fusion; menu source restaurant published, checked 2026-10-22
 - [La Fête](https://alpha-0619.github.io/usa-menus/la-fete/): French; menu source restaurant published, checked 2026-10-22
 - [Ladino](https://alpha-0619.github.io/usa-menus/ladino/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
+- [Le Jardinier Houston](https://alpha-0619.github.io/usa-menus/le-jardinier-houston/): French; menu source restaurant published, checked 2026-10-22
 - [Little Bear](https://alpha-0619.github.io/usa-menus/little-bear/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Lola Gaspar](https://alpha-0619.github.io/usa-menus/lola-gaspar/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Lom Wong](https://alpha-0619.github.io/usa-menus/lom-wong/): Thai; menu source restaurant published, checked 2026-10-22
@@ -71,6 +79,7 @@
 - [Mirra](https://alpha-0619.github.io/usa-menus/mirra/): Fusion; menu source restaurant published, checked 2026-10-22
 - [Mister Mao](https://alpha-0619.github.io/usa-menus/mister-mao/): Asian; menu source restaurant published, checked 2026-10-22
 - [Mister Oso](https://alpha-0619.github.io/usa-menus/mister-oso/): Latin American; menu source restaurant published, checked 2026-10-22
+- [Miura](https://alpha-0619.github.io/usa-menus/miura/): Sushi; menu source restaurant published, checked 2026-10-22
 - [Monte](https://alpha-0619.github.io/usa-menus/monte/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Nadu](https://alpha-0619.github.io/usa-menus/nadu/): Indian; menu source restaurant published, checked 2026-10-22
 - [Nyonya](https://alpha-0619.github.io/usa-menus/nyonya/): Malaysian; menu source restaurant published, checked 2026-10-22
@@ -79,6 +88,7 @@
 - [Odo](https://alpha-0619.github.io/usa-menus/odo/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Olmo](https://alpha-0619.github.io/usa-menus/olmo/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Ômo by Jônt](https://alpha-0619.github.io/usa-menus/omo-by-jont/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Osteria Mozza](https://alpha-0619.github.io/usa-menus/osteria-mozza/): Italian; menu source restaurant published, checked 2026-10-22
 - [Pausa](https://alpha-0619.github.io/usa-menus/pausa/): Italian; menu source restaurant published, checked 2026-10-22
 - [Peppercorn Station](https://alpha-0619.github.io/usa-menus/peppercorn-station/): Chinese; menu source restaurant published, checked 2026-10-22
 - [Pinch Chinese](https://alpha-0619.github.io/usa-menus/pinch-chinese/): Chinese; menu source restaurant published, checked 2026-10-22
@@ -102,6 +112,7 @@
 - [Sifr](https://alpha-0619.github.io/usa-menus/sifr/): Middle Eastern; menu source restaurant published, checked 2026-10-22
 - [Sochi Kitchen](https://alpha-0619.github.io/usa-menus/sochi-kitchen/): Vietnamese; menu source restaurant published, checked 2026-10-22
 - [Soda Club](https://alpha-0619.github.io/usa-menus/soda-club/): Vegan; menu source restaurant published, checked 2026-10-22
+- [Soichi](https://alpha-0619.github.io/usa-menus/soichi/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Sorrel](https://alpha-0619.github.io/usa-menus/sorrel/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Southerleigh Fine Food & Brewery](https://alpha-0619.github.io/usa-menus/southerleigh-fine-food-brewery/): American; menu source restaurant published, checked 2026-10-22
 - [Speedy Romeo](https://alpha-0619.github.io/usa-menus/speedy-romeo/): Pizza; menu source restaurant published, checked 2026-10-22
@@ -116,6 +127,7 @@
 - [Tanoreen](https://alpha-0619.github.io/usa-menus/tanoreen/): Middle Eastern; menu source restaurant published, checked 2026-10-22
 - [Tavernetta](https://alpha-0619.github.io/usa-menus/tavernetta/): Italian; menu source restaurant published, checked 2026-10-22
 - [The Cookery](https://alpha-0619.github.io/usa-menus/the-cookery/): Italian; menu source restaurant published, checked 2026-10-22
+- [The Progress](https://alpha-0619.github.io/usa-menus/the-progress/): Californian; menu source restaurant published, checked 2026-10-22
 - [Tonchin](https://alpha-0619.github.io/usa-menus/tonchin/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Troubadour](https://alpha-0619.github.io/usa-menus/troubadour/): French; menu source restaurant published, checked 2026-10-22
 - [Virtue](https://alpha-0619.github.io/usa-menus/virtue/): Southern; menu source restaurant published, checked 2026-10-22
