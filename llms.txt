@@ -16,12 +16,14 @@
 - [Annette](https://alpha-0619.github.io/usa-menus/annette/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Ash'Kara](https://alpha-0619.github.io/usa-menus/ash-kara/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
 - [Bar Volpe](https://alpha-0619.github.io/usa-menus/bar-volpe/): Italian; menu source restaurant published, checked 2026-10-22
+- [Boia De](https://alpha-0619.github.io/usa-menus/boia-de/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Bonnie's](https://alpha-0619.github.io/usa-menus/bonnie-s/): Cantonese; menu source restaurant published, checked 2026-10-22
 - [Boonie's](https://alpha-0619.github.io/usa-menus/boonie-s/): Filipino; menu source restaurant published, checked 2026-10-22
 - [Callie](https://alpha-0619.github.io/usa-menus/callie/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
 - [Cane](https://alpha-0619.github.io/usa-menus/cane/): Caribbean; menu source restaurant published, checked 2026-10-22
 - [Chalong Southern Thai](https://alpha-0619.github.io/usa-menus/chalong-southern-thai/): Thai; menu source restaurant published, checked 2026-10-22
 - [Chef’s Special Cocktail Bar](https://alpha-0619.github.io/usa-menus/chefs-special-cocktail-bar/): Chinese; menu source restaurant published, checked 2026-10-22
+- [Chez Noir](https://alpha-0619.github.io/usa-menus/chez-noir/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Ciccio](https://alpha-0619.github.io/usa-menus/ciccio/): Italian; menu source restaurant published, checked 2026-10-22
 - [Cochon](https://alpha-0619.github.io/usa-menus/cochon/): Cajun; menu source restaurant published, checked 2026-10-22
 - [Coqodaq](https://alpha-0619.github.io/usa-menus/coqodaq/): Korean; menu source restaurant published, checked 2026-10-22
@@ -41,10 +43,14 @@
 - [Grá](https://alpha-0619.github.io/usa-menus/gra/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Great China](https://alpha-0619.github.io/usa-menus/great-china/): Chinese; menu source restaurant published, checked 2026-10-22
 - [HanGawi](https://alpha-0619.github.io/usa-menus/hangawi/): Korean; menu source restaurant published, checked 2026-10-22
+- [Her Place Supper Club](https://alpha-0619.github.io/usa-menus/her-place-supper-club/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Heritage](https://alpha-0619.github.io/usa-menus/heritage/): Pizza; menu source restaurant published, checked 2026-10-22
+- [Hestia](https://alpha-0619.github.io/usa-menus/hestia/): American; menu source restaurant published, checked 2026-10-22
+- [Indienne](https://alpha-0619.github.io/usa-menus/indienne/): Indian; menu source restaurant published, checked 2026-10-22
 - [Jon & Vinny’s](https://alpha-0619.github.io/usa-menus/jon-vinnys/): Italian-American; menu source restaurant published, checked 2026-10-22
 - [Jônt](https://alpha-0619.github.io/usa-menus/jont/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Joo Ok](https://alpha-0619.github.io/usa-menus/joo-ok/): Korean; menu source restaurant published, checked 2026-10-22
+- [Kali](https://alpha-0619.github.io/usa-menus/kali/): Steakhouse; menu source restaurant published, checked 2026-10-22
 - [Kasama](https://alpha-0619.github.io/usa-menus/kasama/): Filipino; menu source restaurant published, checked 2026-10-22
 - [Kato](https://alpha-0619.github.io/usa-menus/kato/): Asian; menu source restaurant published, checked 2026-10-22
 - [Kemuri Tatsu-ya](https://alpha-0619.github.io/usa-menus/kemuri-tatsu-ya/): Izakaya; menu source restaurant published, checked 2026-10-22
@@ -58,39 +64,58 @@
 - [Lom Wong](https://alpha-0619.github.io/usa-menus/lom-wong/): Thai; menu source restaurant published, checked 2026-10-22
 - [Lucali](https://alpha-0619.github.io/usa-menus/lucali/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Lula Cafe](https://alpha-0619.github.io/usa-menus/lula-cafe/): American; menu source restaurant published, checked 2026-10-22
+- [Madcap](https://alpha-0619.github.io/usa-menus/madcap/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Mako](https://alpha-0619.github.io/usa-menus/mako/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Maximo](https://alpha-0619.github.io/usa-menus/maximo/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Mi Tocaya Antojería](https://alpha-0619.github.io/usa-menus/mi-tocaya-antojeria/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Mirra](https://alpha-0619.github.io/usa-menus/mirra/): Fusion; menu source restaurant published, checked 2026-10-22
 - [Mister Mao](https://alpha-0619.github.io/usa-menus/mister-mao/): Asian; menu source restaurant published, checked 2026-10-22
 - [Mister Oso](https://alpha-0619.github.io/usa-menus/mister-oso/): Latin American; menu source restaurant published, checked 2026-10-22
+- [Monte](https://alpha-0619.github.io/usa-menus/monte/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Nadu](https://alpha-0619.github.io/usa-menus/nadu/): Indian; menu source restaurant published, checked 2026-10-22
 - [Nyonya](https://alpha-0619.github.io/usa-menus/nyonya/): Malaysian; menu source restaurant published, checked 2026-10-22
+- [O by Brush](https://alpha-0619.github.io/usa-menus/o-by-brush/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Odd Duck](https://alpha-0619.github.io/usa-menus/odd-duck/): American; menu source restaurant published, checked 2026-10-22
 - [Odo](https://alpha-0619.github.io/usa-menus/odo/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Olmo](https://alpha-0619.github.io/usa-menus/olmo/): Mexican; menu source restaurant published, checked 2026-10-22
+- [Ômo by Jônt](https://alpha-0619.github.io/usa-menus/omo-by-jont/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Pausa](https://alpha-0619.github.io/usa-menus/pausa/): Italian; menu source restaurant published, checked 2026-10-22
 - [Peppercorn Station](https://alpha-0619.github.io/usa-menus/peppercorn-station/): Chinese; menu source restaurant published, checked 2026-10-22
 - [Pinch Chinese](https://alpha-0619.github.io/usa-menus/pinch-chinese/): Chinese; menu source restaurant published, checked 2026-10-22
 - [Pizzeria Bianco Los Angeles](https://alpha-0619.github.io/usa-menus/pizzeria-bianco-los-angeles/): Pizza; menu source restaurant published, checked 2026-10-22
+- [Protégé](https://alpha-0619.github.io/usa-menus/protege/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Providence](https://alpha-0619.github.io/usa-menus/providence/): Seafood; menu source restaurant published, checked 2026-10-22
 - [Ramen Gaijin](https://alpha-0619.github.io/usa-menus/ramen-gaijin/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Rasarumah](https://alpha-0619.github.io/usa-menus/rasarumah/): Malaysian; menu source restaurant published, checked 2026-10-22
 - [Residents Cafe & Bar](https://alpha-0619.github.io/usa-menus/residents-cafe-bar/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Restaurant Guy Savoy](https://alpha-0619.github.io/usa-menus/restaurant-guy-savoy/): French Contemporary; menu source restaurant published, checked 2026-10-22
+- [Restaurant Yuu](https://alpha-0619.github.io/usa-menus/restaurant-yuu/): French Contemporary; menu source restaurant published, checked 2026-10-22
+- [Rocca](https://alpha-0619.github.io/usa-menus/rocca/): Italian; menu source restaurant published, checked 2026-10-22
 - [Rolo's](https://alpha-0619.github.io/usa-menus/rolo-s/): American; menu source restaurant published, checked 2026-10-22
 - [Rooster and the Till](https://alpha-0619.github.io/usa-menus/rooster-and-the-till/): International; menu source restaurant published, checked 2026-10-22
+- [Rooster & Owl](https://alpha-0619.github.io/usa-menus/rooster-owl/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Rougarou](https://alpha-0619.github.io/usa-menus/rougarou/): Southern; menu source restaurant published, checked 2026-10-22
 - [Saba](https://alpha-0619.github.io/usa-menus/saba/): Middle Eastern; menu source restaurant published, checked 2026-10-22
+- [Seline](https://alpha-0619.github.io/usa-menus/seline/): Californian; menu source restaurant published, checked 2026-10-22
+- [Semma](https://alpha-0619.github.io/usa-menus/semma/): Indian; menu source restaurant published, checked 2026-10-22
+- [Sepia](https://alpha-0619.github.io/usa-menus/sepia/): American; menu source restaurant published, checked 2026-10-22
 - [Sifr](https://alpha-0619.github.io/usa-menus/sifr/): Middle Eastern; menu source restaurant published, checked 2026-10-22
 - [Sochi Kitchen](https://alpha-0619.github.io/usa-menus/sochi-kitchen/): Vietnamese; menu source restaurant published, checked 2026-10-22
 - [Soda Club](https://alpha-0619.github.io/usa-menus/soda-club/): Vegan; menu source restaurant published, checked 2026-10-22
+- [Sorrel](https://alpha-0619.github.io/usa-menus/sorrel/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Southerleigh Fine Food & Brewery](https://alpha-0619.github.io/usa-menus/southerleigh-fine-food-brewery/): American; menu source restaurant published, checked 2026-10-22
 - [Speedy Romeo](https://alpha-0619.github.io/usa-menus/speedy-romeo/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Spinning Bones](https://alpha-0619.github.io/usa-menus/spinning-bones/): Californian; menu source restaurant published, checked 2026-10-22
+- [Spring](https://alpha-0619.github.io/usa-menus/spring/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [State Bird Provisions](https://alpha-0619.github.io/usa-menus/state-bird-provisions/): Californian; menu source restaurant published, checked 2026-10-22
 - [Streetlight Taco](https://alpha-0619.github.io/usa-menus/streetlight-taco/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Sumiao Hunan Kitchen](https://alpha-0619.github.io/usa-menus/sumiao-hunan-kitchen/): Chinese; menu source restaurant published, checked 2026-10-22
+- [Sun Moon Studio](https://alpha-0619.github.io/usa-menus/sun-moon-studio/): Californian; menu source restaurant published, checked 2026-10-22
 - [Superkhana International](https://alpha-0619.github.io/usa-menus/superkhana-international/): Indian; menu source restaurant published, checked 2026-10-22
+- [Sushi Inaba](https://alpha-0619.github.io/usa-menus/sushi-inaba/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Tanoreen](https://alpha-0619.github.io/usa-menus/tanoreen/): Middle Eastern; menu source restaurant published, checked 2026-10-22
 - [Tavernetta](https://alpha-0619.github.io/usa-menus/tavernetta/): Italian; menu source restaurant published, checked 2026-10-22
 - [The Cookery](https://alpha-0619.github.io/usa-menus/the-cookery/): Italian; menu source restaurant published, checked 2026-10-22
 - [Tonchin](https://alpha-0619.github.io/usa-menus/tonchin/): Japanese; menu source restaurant published, checked 2026-10-22
+- [Troubadour](https://alpha-0619.github.io/usa-menus/troubadour/): French; menu source restaurant published, checked 2026-10-22
 - [Virtue](https://alpha-0619.github.io/usa-menus/virtue/): Southern; menu source restaurant published, checked 2026-10-22
