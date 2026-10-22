@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search menus by dish and price | Menu Check</title>
+<meta name="description" content="Restaurant menus in the United States with prices in USD, starting with the MICHELIN-starred restaurants. Every page says where the menu came from and when it was checked.">
+<link rel="canonical" href="https://alpha-0619.github.io/usa-menus/search/">
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:16px;line-height:1.5}
+form{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+label{font-size:.85em;color:#444;display:flex;flex-direction:column;gap:2px}
+label.q{grid-column:1/-1}
+input,select{font:inherit;padding:8px;border:1px solid #bbb;border-radius:6px;min-width:0;width:100%;box-sizing:border-box}
+.hint{color:#555;font-size:.9em;overflow-wrap:anywhere}
+.hint a{margin-right:10px;white-space:nowrap;display:inline-block}
+td:first-child{overflow-wrap:anywhere}
+.r{border-top:1px solid #ddd;padding:10px 0}
+.r h2{font-size:1.05em;margin:0}
+.meta{font-size:.85em;color:#555}
+.closed{font-size:.85em;color:#8a2b00}
+table{width:100%;border-collapse:collapse;margin-top:4px}
+td{padding:4px;border-bottom:1px solid #eee;vertical-align:top}
+td:last-child{text-align:right;white-space:nowrap}
+small{color:#555}
+mark{background:#fff3a8}
+#count{font-weight:600}
+</style></head><body>
+<p><a href="../">Menu Check</a></p>
+<h1>Search menus by dish and price</h1>
+<p class="hint">Restaurant menus in the United States with prices in USD, starting with the MICHELIN-starred restaurants. Every page says where the menu came from and when it was checked. Prices are as published by each restaurant, with the date we checked. Always confirm with the restaurant before you go.</p>
+<form id="f" onsubmit="return false">
+<label class="q">Dish, ingredient or restaurant (French or English)
+<input id="q" name="q" type="search" placeholder="e.g. duck, truffle, lunch, vegetarian" autocomplete="off"></label>
+<label>City<select id="city" name="city"><option value="">All cities</option></select></label>
+<label>Michelin<select id="stars" name="stars"><option value="">All</option></select></label>
+<label>Max price (USD)<input id="max" name="max" type="number" min="0" step="1" inputmode="numeric" placeholder="any"></label>
+</form>
+<p class="hint">Try: <a href="?q=duck">duck</a><a href="?q=lunch&amp;max=60">lunch under 60</a><a href="?q=truffle&amp;city=Paris">truffle in Paris</a><a href="?q=vegetarian">vegetarian</a><a href="?stars=3&amp;max=250">3 stars under 250</a></p>
+<p id="count" aria-live="polite">Loading menus…</p>
+<div id="out"></div>
+<noscript><p>This search needs JavaScript. The full data is at <a href="../menus.json">menus.json</a>.</p></noscript>
+<script>
+"use strict";
+const CUR = "USD";
+const fold = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
+  .replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/[’'`´]/g, " ");
+// English words people type -> French words printed on the menus (matched as substrings after fold)
+const SYN = {
+  duck: ["canard", "colvert"], lobster: ["homard"], beef: ["boeuf", "wagyu"], veal: ["veau"], lamb: ["agneau"],
+  pork: ["porc", "cochon"], chicken: ["poulet", "volaille", "poularde"], pigeon: ["pigeon", "pigeonneau"],
+  scallop: ["saint-jacques", "saint jacques", "st jacques"], oyster: ["huitre"], crab: ["crabe", "tourteau", "araignee"],
+  seabass: ["bar", "loup"], cod: ["cabillaud"], tuna: ["thon"], salmon: ["saumon"], eel: ["anguille"],
+  langoustine: ["langoustine"], shrimp: ["crevette", "gambas"], prawn: ["crevette", "gambas"], squid: ["calamar", "encornet", "seiche"],
+  truffle: ["truffe"], mushroom: ["champignon", "cepe", "girolle", "morille"], cheese: ["fromage"],
+  chocolate: ["chocolat"], egg: ["oeuf"], snail: ["escargot"], frog: ["grenouille"], rabbit: ["lapin"],
+  venison: ["chevreuil", "cerf", "biche"], game: ["gibier"], pear: ["poire"], apple: ["pomme"], lemon: ["citron"],
+  strawberry: ["fraise"], raspberry: ["framboise"], fig: ["figue"], chestnut: ["chataigne", "marron"],
+  vegetarian: ["vegetarien", "vegetal", "vegetale", "vegetarian"], vegan: ["vegan", "vegetal", "vegetale"],
+  lunch: ["dejeuner", "midi", "lunch"], dinner: ["diner", "soir", "dinner"], tasting: ["degustation", "tasting"],
+  pairing: ["accord", "pairing"], wine: ["vin", "wine"], dessert: ["dessert"], kids: ["enfant"], children: ["enfant"]
+};
+const PHRASES = [["sea bass", "seabass"], ["foie gras", "foie_gras"], ["wine pairing", "pairing"], ["tasting menu", "tasting"]];
+let DATA = null, timer = null;
+
+function parseTerms(q) {
+  let s = " " + fold(q) + " ";
+  for (const [p, t] of PHRASES) s = s.split(" " + p + " ").join(" " + t + " ");
+  return s.split(/[^a-z0-9_฀-๿-]+/).filter(t => t.length > 1).map(t => {
+    if (t === "foie_gras") return ["foie gras"];
+    const base = SYN[t] ? t : (t.endsWith("s") && SYN[t.slice(0, -1)] ? t.slice(0, -1) : null);
+    return base ? [t, base, ...SYN[base]] : [t];
+  });
+}
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const starLabel = s => s === "bib" ? "Bib Gourmand" : (s ? "★".repeat(+s) + " Michelin" : "");
+const priceOf = it => it.prices ? Math.min(...it.prices) : (it.in_menu && it.in_menu.prices ? Math.min(...it.in_menu.prices) : null);
+const withCur = s => /€|eur/i.test(String(s)) ? esc(s) : esc(s) + " " + CUR;
+function priceText(it) {
+  if (it.prices) return withCur(it.price_as_printed || it.prices[0]) + (it.extra ? " <small>(extra)</small>" : "") + (it.set_menu ? "<br><small>set menu</small>" : "");
+  if (it.in_menu) return "in «" + esc(it.in_menu.name) + "»" + (it.in_menu.prices ? " · " + withCur(it.in_menu.price_as_printed || it.in_menu.prices[0]) : "");
+  return "";
+}
+
+function run() {
+  if (!DATA) return;
+  const q = document.getElementById("q").value.trim(), city = document.getElementById("city").value,
+        stars = document.getElementById("stars").value, maxv = document.getElementById("max").value,
+        max = maxv === "" ? null : +maxv;
+  const p = new URLSearchParams();
+  if (q) p.set("q", q); if (city) p.set("city", city); if (stars) p.set("stars", stars); if (maxv !== "") p.set("max", maxv);
+  history.replaceState(null, "", p.toString() ? "?" + p : location.pathname);
+  const terms = parseTerms(q);
+  // add-ons (supplements, drinks) are left out of price-filtered results unless the words ask for them
+  const wantsExtras = terms.some(alts => alts.some(a => /accord|pairing|vin|wine|verre|glass|suppl|boisson|drink|fromage|cheese/.test(a)));
+  if (!terms.length && !city && !stars && max === null) {
+    document.getElementById("count").textContent = DATA.restaurants.length + " restaurants, " + DATA.items + " dishes and menus with prices. Type a dish or pick a filter.";
+    document.getElementById("out").innerHTML = ""; return;
+  }
+  const hits = [];
+  for (const r of DATA.restaurants) {
+    if (city && r.city !== city) continue;
+    if (stars && r.stars !== stars) continue;
+    const rtext = fold([r.name, r.cuisine, r.city, r.area].join(" "));
+    const items = [];
+    for (const it of r.items) {
+      const pr = priceOf(it);
+      if (max !== null && (pr === null || pr > max || it.per_weight || (it.extra && !wantsExtras))) continue;
+      const text = rtext + " " + fold([it.name, it.name_en, it.section, it.in_menu && it.in_menu.name].join(" "));
+      if (terms.every(alts => alts.some(a => text.includes(a)))) items.push(it);
+    }
+    if (items.length) {
+      const rank = it => (it.extra || it.per_weight ? 2 : (it.set_menu ? 0 : 1));
+      items.sort((a, b) => rank(a) - rank(b) || (priceOf(a) ?? 1e9) - (priceOf(b) ?? 1e9));
+      hits.push({r, items, low: priceOf(items[0]), menu: !!items[0].set_menu});
+    }
+  }
+  hits.sort((a, b) => (b.menu - a.menu) || (a.low ?? 1e9) - (b.low ?? 1e9));
+  const n = hits.reduce((s, h) => s + h.items.length, 0);
+  document.getElementById("count").textContent = hits.length ? hits.length + " restaurants, " + n + " matching lines" + (hits.length > 60 ? " (first 60 shown)" : "") : "No match. Try fewer words or a higher price.";
+  document.getElementById("out").innerHTML = hits.slice(0, 60).map(({r, items}) =>
+    '<div class="r"><h2><a href="../' + esc(r.slug) + '/">' + esc(r.name) + '</a></h2>' +
+    '<div class="meta">' + [esc(r.city) + (r.area ? " · " + esc(r.area) : ""), starLabel(r.stars), r.cuisine ? esc(r.cuisine) : "", "checked " + esc(r.checked)].filter(Boolean).join(" · ") + '</div>' +
+    (r.closure ? '<div class="closed">Closure notice: ' + esc(r.closure) + '</div>' : "") +
+    '<table><tbody>' + items.slice(0, 8).map(it =>
+      '<tr><td>' + esc(it.name || it.name_en) + (it.name && it.name_en ? '<br><small>' + esc(it.name_en) + '</small>' : "") +
+      (it.section ? '<br><small>' + esc(it.section) + '</small>' : "") + '</td><td>' + priceText(it) + '</td></tr>').join("") +
+    '</tbody></table>' + (items.length > 8 ? '<div class="meta"><a href="../' + esc(r.slug) + '/">+' + (items.length - 8) + ' more on the menu page</a></div>' : "") +
+    '</div>').join("");
+}
+
+function fillSelect(id, values, label) {
+  const sel = document.getElementById(id);
+  for (const [v, n] of values) { const o = document.createElement("option"); o.value = v; o.textContent = label(v) + " (" + n + ")"; sel.appendChild(o); }
+}
+
+fetch("../menus.json").then(r => r.json()).then(d => {
+  DATA = d;
+  DATA.items = d.restaurants.reduce((s, r) => s + r.items.filter(it => it.prices).length, 0);
+  const cities = {}, stars = {};
+  for (const r of d.restaurants) { cities[r.city] = (cities[r.city] || 0) + 1; if (r.stars) stars[r.stars] = (stars[r.stars] || 0) + 1; }
+  fillSelect("city", Object.entries(cities).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])), v => v);
+  fillSelect("stars", ["3", "2", "1", "bib"].filter(s => stars[s]).map(s => [s, stars[s]]), starLabel);
+  const p = new URLSearchParams(location.search);
+  for (const k of ["q", "city", "stars", "max"]) if (p.get(k)) document.getElementById(k).value = p.get(k);
+  for (const k of ["q", "city", "stars", "max"]) document.getElementById(k).addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 150); });
+  run();
+}).catch(() => { document.getElementById("count").textContent = "Could not load the menu data. The full data is at menus.json."; });
+</script>
+
+</body></html>

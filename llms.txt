@@ -1,0 +1,29 @@
+# Menu Check
+
+> Restaurant menus in the United States with prices in USD, starting with the MICHELIN-starred restaurants. Every page states where the menu came from (the restaurant's own website, PDF, e-menu, or a menu photographed in the restaurant) and the date it was checked.
+
+## Data and search
+
+- [menus.json](https://alpha-0619.github.io/usa-menus/menus.json): every dish and set-menu line with its price (USD), the menu's source URL and the date we checked it, one JSON file for all restaurants.
+- [Search](https://alpha-0619.github.io/usa-menus/search/?q=duck&max=120): find restaurants by dish or ingredient (French or English) and price; URL parameters q (words), city, stars (1, 2, 3 or bib) and max (highest price).
+
+## Restaurants
+
+- [Acamaya](https://alpha-0619.github.io/usa-menus/acamaya/): Mexican; menu source restaurant published, checked 2026-10-22
+- [Cochon](https://alpha-0619.github.io/usa-menus/cochon/): Cajun; menu source restaurant published, checked 2026-10-22
+- [Cullum's Attaboy](https://alpha-0619.github.io/usa-menus/cullum-s-attaboy/): French; menu source restaurant published, checked 2026-10-22
+- [Emeril’s](https://alpha-0619.github.io/usa-menus/emerils/): American; menu source restaurant published, checked 2026-10-22
+- [Gabriel Kreuther](https://alpha-0619.github.io/usa-menus/gabriel-kreuther/): French; menu source restaurant published, checked 2026-10-22
+- [Gemma](https://alpha-0619.github.io/usa-menus/gemma/): American; menu source restaurant published, checked 2026-10-22
+- [Jônt](https://alpha-0619.github.io/usa-menus/jont/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Joo Ok](https://alpha-0619.github.io/usa-menus/joo-ok/): Korean; menu source restaurant published, checked 2026-10-22
+- [Kasama](https://alpha-0619.github.io/usa-menus/kasama/): Filipino; menu source restaurant published, checked 2026-10-22
+- [Kato](https://alpha-0619.github.io/usa-menus/kato/): Asian; menu source restaurant published, checked 2026-10-22
+- [La Fête](https://alpha-0619.github.io/usa-menus/la-fete/): French; menu source restaurant published, checked 2026-10-22
+- [Ladino](https://alpha-0619.github.io/usa-menus/ladino/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
+- [Little Bear](https://alpha-0619.github.io/usa-menus/little-bear/): Contemporary; menu source restaurant published, checked 2026-10-22
+- [Mister Mao](https://alpha-0619.github.io/usa-menus/mister-mao/): Asian; menu source restaurant published, checked 2026-10-22
+- [Odo](https://alpha-0619.github.io/usa-menus/odo/): Japanese; menu source restaurant published, checked 2026-10-22
+- [Providence](https://alpha-0619.github.io/usa-menus/providence/): Seafood; menu source restaurant published, checked 2026-10-22
+- [Saba](https://alpha-0619.github.io/usa-menus/saba/): Middle Eastern; menu source restaurant published, checked 2026-10-22
+- [Southerleigh Fine Food & Brewery](https://alpha-0619.github.io/usa-menus/southerleigh-fine-food-brewery/): American; menu source restaurant published, checked 2026-10-22
