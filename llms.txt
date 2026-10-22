@@ -13,17 +13,21 @@
 - [Acamaya](https://alpha-0619.github.io/usa-menus/acamaya/): Mexican; menu source restaurant published, checked 2026-10-22
 - [Annette](https://alpha-0619.github.io/usa-menus/annette/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Ash'Kara](https://alpha-0619.github.io/usa-menus/ash-kara/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
+- [Bar Volpe](https://alpha-0619.github.io/usa-menus/bar-volpe/): Italian; menu source restaurant published, checked 2026-10-22
 - [Callie](https://alpha-0619.github.io/usa-menus/callie/): Mediterranean Cuisine; menu source restaurant published, checked 2026-10-22
 - [Ciccio](https://alpha-0619.github.io/usa-menus/ciccio/): Italian; menu source restaurant published, checked 2026-10-22
 - [Cochon](https://alpha-0619.github.io/usa-menus/cochon/): Cajun; menu source restaurant published, checked 2026-10-22
 - [Cullum's Attaboy](https://alpha-0619.github.io/usa-menus/cullum-s-attaboy/): French; menu source restaurant published, checked 2026-10-22
+- [Daru](https://alpha-0619.github.io/usa-menus/daru/): Indian; menu source restaurant published, checked 2026-10-22
 - [Dija Mara](https://alpha-0619.github.io/usa-menus/dija-mara/): Indonesian; menu source restaurant published, checked 2026-10-22
+- [Dizengoff](https://alpha-0619.github.io/usa-menus/dizengoff/): Israeli; menu source restaurant published, checked 2026-10-22
 - [Emeril’s](https://alpha-0619.github.io/usa-menus/emerils/): American; menu source restaurant published, checked 2026-10-22
 - [Gabriel Kreuther](https://alpha-0619.github.io/usa-menus/gabriel-kreuther/): French; menu source restaurant published, checked 2026-10-22
 - [Gemma](https://alpha-0619.github.io/usa-menus/gemma/): American; menu source restaurant published, checked 2026-10-22
 - [Glo Noodle House](https://alpha-0619.github.io/usa-menus/glo-noodle-house/): Ramen; menu source restaurant published, checked 2026-10-22
 - [Grá](https://alpha-0619.github.io/usa-menus/gra/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Great China](https://alpha-0619.github.io/usa-menus/great-china/): Chinese; menu source restaurant published, checked 2026-10-22
+- [Heritage](https://alpha-0619.github.io/usa-menus/heritage/): Pizza; menu source restaurant published, checked 2026-10-22
 - [Jônt](https://alpha-0619.github.io/usa-menus/jont/): Contemporary; menu source restaurant published, checked 2026-10-22
 - [Joo Ok](https://alpha-0619.github.io/usa-menus/joo-ok/): Korean; menu source restaurant published, checked 2026-10-22
 - [Kasama](https://alpha-0619.github.io/usa-menus/kasama/): Filipino; menu source restaurant published, checked 2026-10-22
@@ -46,8 +50,11 @@
 - [Providence](https://alpha-0619.github.io/usa-menus/providence/): Seafood; menu source restaurant published, checked 2026-10-22
 - [Ramen Gaijin](https://alpha-0619.github.io/usa-menus/ramen-gaijin/): Japanese; menu source restaurant published, checked 2026-10-22
 - [Rasarumah](https://alpha-0619.github.io/usa-menus/rasarumah/): Malaysian; menu source restaurant published, checked 2026-10-22
+- [Rooster and the Till](https://alpha-0619.github.io/usa-menus/rooster-and-the-till/): International; menu source restaurant published, checked 2026-10-22
 - [Rougarou](https://alpha-0619.github.io/usa-menus/rougarou/): Southern; menu source restaurant published, checked 2026-10-22
 - [Saba](https://alpha-0619.github.io/usa-menus/saba/): Middle Eastern; menu source restaurant published, checked 2026-10-22
 - [Southerleigh Fine Food & Brewery](https://alpha-0619.github.io/usa-menus/southerleigh-fine-food-brewery/): American; menu source restaurant published, checked 2026-10-22
 - [Spinning Bones](https://alpha-0619.github.io/usa-menus/spinning-bones/): Californian; menu source restaurant published, checked 2026-10-22
 - [Streetlight Taco](https://alpha-0619.github.io/usa-menus/streetlight-taco/): Mexican; menu source restaurant published, checked 2026-10-22
+- [Sumiao Hunan Kitchen](https://alpha-0619.github.io/usa-menus/sumiao-hunan-kitchen/): Chinese; menu source restaurant published, checked 2026-10-22
+- [The Cookery](https://alpha-0619.github.io/usa-menus/the-cookery/): Italian; menu source restaurant published, checked 2026-10-22
