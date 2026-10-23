@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Search menus by dish and price | Menu Check</title>
-<meta name="description" content="Restaurant menus in the United States with prices in USD, starting with the MICHELIN-starred restaurants. Every page says where the menu came from and when it was checked.">
+<meta name="description" content="Restaurant menus in the United States with prices in USD. Every page says where the menu came from and when it was checked.">
 <link rel="canonical" href="https://alpha-0619.github.io/usa-menus/search/">
 <style>
 body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:16px;line-height:1.5}
@@ -25,15 +25,14 @@ mark{background:#fff3a8}
 </style></head><body>
 <p><a href="../">Menu Check</a></p>
 <h1>Search menus by dish and price</h1>
-<p class="hint">Restaurant menus in the United States with prices in USD, starting with the MICHELIN-starred restaurants. Every page says where the menu came from and when it was checked. Prices are as published by each restaurant, with the date we checked. Always confirm with the restaurant before you go.</p>
+<p class="hint">Restaurant menus in the United States with prices in USD. Every page says where the menu came from and when it was checked. Prices are as published by each restaurant, with the date we checked. Always confirm with the restaurant before you go.</p>
 <form id="f" onsubmit="return false">
 <label class="q">Dish, ingredient or restaurant (French or English)
 <input id="q" name="q" type="search" placeholder="e.g. duck, truffle, lunch, vegetarian" autocomplete="off"></label>
 <label>City<select id="city" name="city"><option value="">All cities</option></select></label>
-<label>Michelin<select id="stars" name="stars"><option value="">All</option></select></label>
 <label>Max price (USD)<input id="max" name="max" type="number" min="0" step="1" inputmode="numeric" placeholder="any"></label>
 </form>
-<p class="hint">Try: <a href="?q=duck">duck</a><a href="?q=lunch&amp;max=60">lunch under 60</a><a href="?q=truffle&amp;city=Paris">truffle in Paris</a><a href="?q=vegetarian">vegetarian</a><a href="?stars=3&amp;max=250">3 stars under 250</a></p>
+<p class="hint">Try: <a href="?q=duck">duck</a><a href="?q=lunch&amp;max=60">lunch under 60</a><a href="?q=truffle&amp;city=Paris">truffle in Paris</a><a href="?q=vegetarian">vegetarian</a></p>
 <p id="count" aria-live="polite">Loading menus…</p>
 <div id="out"></div>
 <noscript><p>This search needs JavaScript. The full data is at <a href="../menus.json">menus.json</a>.</p></noscript>
@@ -70,7 +69,6 @@ function parseTerms(q) {
   });
 }
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
-const starLabel = s => s === "bib" ? "Bib Gourmand" : (s ? "★".repeat(+s) + " Michelin" : "");
 const priceOf = it => it.prices ? Math.min(...it.prices) : (it.in_menu && it.in_menu.prices ? Math.min(...it.in_menu.prices) : null);
 const withCur = s => /€|eur/i.test(String(s)) ? esc(s) : esc(s) + " " + CUR;
 function priceText(it) {
@@ -82,23 +80,22 @@ function priceText(it) {
 function run() {
   if (!DATA) return;
   const q = document.getElementById("q").value.trim(), city = document.getElementById("city").value,
-        stars = document.getElementById("stars").value, maxv = document.getElementById("max").value,
+        maxv = document.getElementById("max").value,
         max = maxv === "" ? null : +maxv;
   const p = new URLSearchParams();
-  if (q) p.set("q", q); if (city) p.set("city", city); if (stars) p.set("stars", stars); if (maxv !== "") p.set("max", maxv);
+  if (q) p.set("q", q); if (city) p.set("city", city); if (maxv !== "") p.set("max", maxv);
   history.replaceState(null, "", p.toString() ? "?" + p : location.pathname);
   const terms = parseTerms(q);
   // add-ons (supplements, drinks) are left out of price-filtered results unless the words ask for them
   const wantsExtras = terms.some(alts => alts.some(a => /accord|pairing|vin|wine|verre|glass|suppl|boisson|drink|fromage|cheese/.test(a)));
-  if (!terms.length && !city && !stars && max === null) {
+  if (!terms.length && !city && max === null) {
     document.getElementById("count").textContent = DATA.restaurants.length + " restaurants, " + DATA.items + " dishes and menus with prices. Type a dish or pick a filter.";
     document.getElementById("out").innerHTML = ""; return;
   }
   const hits = [];
   for (const r of DATA.restaurants) {
     if (city && r.city !== city) continue;
-    if (stars && r.stars !== stars) continue;
-    const rtext = fold([r.name, r.cuisine, r.city, r.area].join(" "));
+    const rtext = fold([r.name, r.city, r.area].join(" "));
     const items = [];
     for (const it of r.items) {
       const pr = priceOf(it);
@@ -117,7 +114,7 @@ function run() {
   document.getElementById("count").textContent = hits.length ? hits.length + " restaurants, " + n + " matching lines" + (hits.length > 60 ? " (first 60 shown)" : "") : "No match. Try fewer words or a higher price.";
   document.getElementById("out").innerHTML = hits.slice(0, 60).map(({r, items}) =>
     '<div class="r"><h2><a href="../' + esc(r.slug) + '/">' + esc(r.name) + '</a></h2>' +
-    '<div class="meta">' + [esc(r.city) + (r.area ? " · " + esc(r.area) : ""), starLabel(r.stars), r.cuisine ? esc(r.cuisine) : "", "checked " + esc(r.checked)].filter(Boolean).join(" · ") + '</div>' +
+    '<div class="meta">' + [esc(r.city) + (r.area ? " · " + esc(r.area) : ""), "checked " + esc(r.checked)].filter(Boolean).join(" · ") + '</div>' +
     (r.closure ? '<div class="closed">Closure notice: ' + esc(r.closure) + '</div>' : "") +
     '<table><tbody>' + items.slice(0, 8).map(it =>
       '<tr><td>' + esc(it.name || it.name_en) + (it.name && it.name_en ? '<br><small>' + esc(it.name_en) + '</small>' : "") +
@@ -134,13 +131,12 @@ function fillSelect(id, values, label) {
 fetch("../menus.json").then(r => r.json()).then(d => {
   DATA = d;
   DATA.items = d.restaurants.reduce((s, r) => s + r.items.filter(it => it.prices).length, 0);
-  const cities = {}, stars = {};
-  for (const r of d.restaurants) { cities[r.city] = (cities[r.city] || 0) + 1; if (r.stars) stars[r.stars] = (stars[r.stars] || 0) + 1; }
+  const cities = {};
+  for (const r of d.restaurants) cities[r.city] = (cities[r.city] || 0) + 1;
   fillSelect("city", Object.entries(cities).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])), v => v);
-  fillSelect("stars", ["3", "2", "1", "bib"].filter(s => stars[s]).map(s => [s, stars[s]]), starLabel);
   const p = new URLSearchParams(location.search);
-  for (const k of ["q", "city", "stars", "max"]) if (p.get(k)) document.getElementById(k).value = p.get(k);
-  for (const k of ["q", "city", "stars", "max"]) document.getElementById(k).addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 150); });
+  for (const k of ["q", "city", "max"]) if (p.get(k)) document.getElementById(k).value = p.get(k);
+  for (const k of ["q", "city", "max"]) document.getElementById(k).addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(run, 150); });
   run();
 }).catch(() => { document.getElementById("count").textContent = "Could not load the menu data. The full data is at menus.json."; });
 </script>
