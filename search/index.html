@@ -23,7 +23,7 @@ small{color:#555}
 mark{background:#fff3a8}
 #count{font-weight:600}
 </style></head><body>
-<p><a href="../">Menu Check</a></p>
+<p><a href="https://alpha-0619.github.io/">Menu Check</a> › <a href="../">United States</a></p>
 <h1>Search menus by dish and price</h1>
 <p class="hint">Restaurant menus in the United States with prices in USD. Every page says where the menu came from and when it was checked. Prices are as published by each restaurant, with the date we checked. Always confirm with the restaurant before you go.</p>
 <form id="f" onsubmit="return false">
@@ -140,5 +140,6 @@ fetch("../menus.json").then(r => r.json()).then(d => {
   run();
 }).catch(() => { document.getElementById("count").textContent = "Could not load the menu data. The full data is at menus.json."; });
 </script>
+<p><small><a href="https://alpha-0619.github.io/about/">About</a> · <a href="https://alpha-0619.github.io/privacy/">Privacy</a></small></p>
 <script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>
